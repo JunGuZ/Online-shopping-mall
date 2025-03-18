@@ -3,8 +3,8 @@
     <!--  头部  -->
     <div class="manager-header">
       <div class="manager-header-left">
-        <img src="@/assets/imgs/logo.png" style="border-radius: 10px"/>
-        <div class="title">天猫商城后台管理</div>
+        <img src="@/assets/imgs/logo1.png" style="border-radius: 10px"/>
+        <div class="title">宠物用品商城后台管理</div>
       </div>
 
       <div class="manager-header-center">

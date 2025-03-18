@@ -4,8 +4,8 @@
     <!--头部-->
     <div class="front-header">
       <div class="front-header-left"@click="navTo('/front/home')">
-        <img src="@/assets/imgs/logo.png" alt="">
-        <div class="title">天猫超市购物商城</div>
+        <img src="@/assets/imgs/logo1.png" alt="">
+        <div class="title">宠物用品商城</div>
       </div>
       <div class="front-header-center" style="text-align: right">
         <el-input style="width: 200px" placeholder="请输入商品名称" v-model="name"></el-input>
@@ -30,6 +30,9 @@
               </el-dropdown-item>
               <el-dropdown-item>
                 <div style="text-decoration: none" @click="navTo('/front/collect')">我的收藏</div>
+              </el-dropdown-item>
+              <el-dropdown-item>
+                <div style="text-decoration: none" @click="navTo('/front/pets')">我的宠物</div>
               </el-dropdown-item>
               <el-dropdown-item>
                 <div style="text-decoration: none" @click="navTo('/front/address')">我的地址</div>

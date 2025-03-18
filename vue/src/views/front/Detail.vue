@@ -81,7 +81,6 @@ export default {
     },
     handleClick(tab, event) {
       this.activeName = tab.name
-
     },
     collect(){
       let data ={userId:this.user.id,

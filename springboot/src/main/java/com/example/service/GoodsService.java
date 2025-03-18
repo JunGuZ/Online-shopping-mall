@@ -43,12 +43,6 @@ public class GoodsService {
     @Resource
     private OrdersMapper ordersMapper;
 
-
-
-
-
-
-
     /**
      * 新增
      */
@@ -125,6 +119,8 @@ public class GoodsService {
         return goodsMapper.selectByName(name);
     }
 
+
+    // 推荐
     public List<Goods> recommend() {
         Account currentUser = TokenUtils.getCurrentUser();
         if (ObjectUtil.isEmpty(currentUser)) {
@@ -145,6 +141,12 @@ public class GoodsService {
         // 6. 获取所有的商品信息
         List<Goods> allGoods = goodsMapper.selectAll(null);
 
+        System.out.println("c1: " + allCollects.toString());
+        System.out.println("c2: " + allCarts.toString());
+        System.out.println("c3: " + allOrders.toString());
+        System.out.println("c4: " + allComments.toString());
+        System.out.println("c5: " + allUsers.toString());
+        System.out.println("c6: " + allGoods.toString());
         // 定义一个存储每个商品和每个用户关系的List
       List<RelateDTO> data = new ArrayList<>();
         // 定义一个存储最后返回给前端的商品List
@@ -198,25 +200,26 @@ public class GoodsService {
         } catch (InterruptedException e) {
             e.printStackTrace();
         } finally {
-// 数据准备结束后，就把这些数据一起喂给这个推荐算法
+            // 数据准备结束后，就把这些数据一起喂给这个推荐算法
             List<Integer> goodsIds = UserCF.recommend(currentUser.getId(), data);
+
+            System.out.println("user1: " + currentUser.getId());
             // 把商品id转换成商品
              recommendResult = goodsIds.stream().map(goodsId -> allGoods.stream()
                             .filter(x -> x.getId().equals(goodsId)).findFirst().orElse(null))
-                    .limit(10).collect(Collectors.toList());
+                    .limit(5).collect(Collectors.toList());
+        }
+
+
+        System.out.println("re: " + recommendResult);
+        if (recommendResult.size() < 5) {
+            int num = 5 - recommendResult.size();
+            List<Goods> list = getRandomGoods(num);
+            recommendResult.addAll(list);
         }
 
 
 
-//                if (CollectionUtil.isEmpty(recommendResult)) {
-//                    // 随机给它推荐10个
-//                    return getRandomGoods(10);
-//                }
-                if (recommendResult.size() < 10) {
-                    int num = 10 - recommendResult.size();
-                    List<Goods> list = getRandomGoods(num);
-                    recommendResult.addAll(list);
-                }
         return recommendResult;
     }
 

@@ -4,7 +4,7 @@
 <div style="display: flex">
   <div class="left"></div>
   <div style="width: 66%; background-color: white; height: 1000px">
-    <div style="color: #FE0137FF; margin: 15px 0 15px 18px; font-weight: bold; font-size: 16px">主题市场</div>
+    <div style="color: #FE0137FF; margin: 15px 0 15px 18px; font-weight: bold; font-size: 16px">主题列表</div>
     <div style="display: flex; margin: 0 25px; height: 550px">
       <div style="flex: 2">
         <div style="display: flex; color: #666666FF; margin: 14px 0" v-for="item in typeData">
@@ -199,17 +199,17 @@ export default {
   min-height: 100vh;
   /*overflow: hidden;*/
   background-size: 100%;
-  background-image: url('@/assets/imgs/img.png');
+  background-image: url('@/assets/imgs/bg.jpg');
 }
 .left {
   width: 17%;
   background-repeat: no-repeat;
-  background-image: url('@/assets/imgs/left-img.png');
+  background-image: url('@/assets/imgs/bg.jpg');
 }
 .right {
   width: 17%;
   background-repeat: no-repeat;
-  background-image: url('@/assets/imgs/right-img.png')
+  background-image: url('@/assets/imgs/bg.jpg')
 }
 .el-col-5{
   width: 20%;

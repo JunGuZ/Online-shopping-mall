@@ -37,4 +37,13 @@ public class RelateDTO {
     public void setUseId(Integer useId) {
         this.useId = useId;
     }
+
+    @Override
+    public String toString() {
+        return "RelateDTO{" +
+                "useId=" + useId +
+                ", goodsId=" + goodsId +
+                ", index=" + index +
+                '}';
+    }
 }

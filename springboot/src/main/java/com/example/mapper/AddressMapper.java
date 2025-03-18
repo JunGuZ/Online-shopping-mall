@@ -36,8 +36,8 @@ public interface AddressMapper {
     */
     List<Address> selectAll(Address address);
 
-  @Select("select * from address where user_id = #{userId} and goods_id = #{goodsId}")
-Address selectByUserIdAndGoodsId(@Param("userId") Integer userId, @Param("goodsId") Integer goodsId);
+    @Select("select * from address where user_id = #{userId} and goods_id = #{goodsId}")
+    Address selectByUserIdAndGoodsId(@Param("userId") Integer userId, @Param("goodsId") Integer goodsId);
 
 
 }

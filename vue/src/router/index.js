@@ -42,6 +42,7 @@ const routes = [
       { path: 'type', name: 'Type', meta: { name: '分类商品' }, component: () => import('../views/front/Type') },
       { path: 'business', name: 'Business', meta: { name: '商家店铺' }, component: () => import('../views/front/Business') },
       { path: 'collect', name: 'Collect', meta: { name: '我的收藏' }, component: () => import('../views/front/Collect') },
+      { path: 'pets', name: 'Pets', meta: { name: '我的宠物' }, component: () => import('../views/front/Pets') },
       { path: 'address', name: 'Address', meta: { name: '我的地址' }, component: () => import('../views/front/Address') },
       { path: 'cart', name: 'Cart', meta: { name: '我的购物车' }, component: () => import('../views/front/Cart') },
       { path: 'orders', name: 'Orders', meta: { name: '我的订单' }, component: () => import('../views/front/Orders') },
