@@ -1,6 +1,6 @@
 <template>
 <div class="main-content">
-<div style="height: 60px; background-color: #C566F6FF"></div>
+<div style="height: 10px; background-color: #ffffff"></div>
 <div style="display: flex">
   <div class="left"></div>
   <div style="width: 66%; background-color: white; height: 1000px">

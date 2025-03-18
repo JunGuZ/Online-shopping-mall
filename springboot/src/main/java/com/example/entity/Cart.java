@@ -1,6 +1,7 @@
 package com.example.entity;
 
 import java.io.Serializable;
+import java.util.Date;
 
 /**
  * 购物车信息表
@@ -20,6 +21,15 @@ public class Cart implements Serializable {
     private String goodsImg;
     private String goodUnit;
     private Double goodsPrice;
+    private Date updateTime;
+
+    public Date getUpdateTime() {
+        return updateTime;
+    }
+
+    public void setUpdateTime(Date updateTime) {
+        this.updateTime = updateTime;
+    }
 
     public Integer getId() {
         return id;

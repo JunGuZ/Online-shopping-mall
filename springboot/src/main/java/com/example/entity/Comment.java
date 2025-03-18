@@ -1,6 +1,7 @@
 package com.example.entity;
 
 import java.io.Serializable;
+import java.util.Date;
 
 /**
  * 评论信息表
@@ -16,10 +17,19 @@ public class Comment implements Serializable {
 
     private String businessName;
     private String goodsName;
-private String userAvatar;
-private String userName;
+    private String userAvatar;
+    private String userName;
     private String time;
     private String content;
+    private Date updateTime;
+
+    public Date getUpdateTime() {
+        return updateTime;
+    }
+
+    public void setUpdateTime(Date updateTime) {
+        this.updateTime = updateTime;
+    }
 
     public Integer getId() {
         return id;

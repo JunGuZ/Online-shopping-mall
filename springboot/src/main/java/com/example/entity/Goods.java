@@ -1,6 +1,7 @@
 package com.example.entity;
 
 import java.io.Serializable;
+import java.util.Date;
 
 /**
  * 公告信息表
@@ -25,6 +26,7 @@ public class Goods implements Serializable {
     private Integer businessId;
     private  String typeName;
     private  String businessName;
+    private Date updateTime;
 
     public String getBusinessName() {
         return businessName;
@@ -112,5 +114,13 @@ public class Goods implements Serializable {
 
     public void setCount(Integer count) {
         this.count = count;
+    }
+
+    public Date getUpdateTime() {
+        return updateTime;
+    }
+
+    public void setUpdateTime(Date updateTime) {
+        this.updateTime = updateTime;
     }
 }
